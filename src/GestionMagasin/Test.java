@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 import Magasin.Magasin;
 import Produits.Produit;
@@ -43,9 +43,9 @@ public class Test {
         System.out.println(p3);
 
         System.out.println("\n********  Question 9 ********\n");
-        p1.setDateExpiration(new Date(2024, 1, 15));
-        p2.setDateExpiration(new Date(2024, 1, 8));
-        p3.setDateExpiration(new Date(2024, 1, 29));
+        p1.setDateExpiration(LocalDate.of(2024, 1, 15));
+        p2.setDateExpiration(LocalDate.of(2024, 1, 8));
+        p3.setDateExpiration(LocalDate.of(2024, 1, 29));
 
         System.out.println(p1);
         System.out.println(p2);
@@ -75,7 +75,7 @@ public class Test {
 
         System.out.println("\n********  Question 1 ********\n");
         System.out.println("Méthode « comparer » prend un seul produit en paramètre " + p1.comparer(p1));
-        Produit p11 = new Produit(1021, "Lait", "Delice", 0.700, new Date(2024, 1, 15));
+        Produit p11 = new Produit(1021, "Lait", "Delice", 0.700, LocalDate.of(2024, 1, 15));
         System.out.println("Méthode « comparer » prend deux produits en paramètre " + Produit.comparer(p1, p11));
 
         System.out.println("\n********  Question 3 ********\n");

@@ -1,12 +1,12 @@
 package Produits;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Produit {
     protected int Id;
     protected String libelle, marque;
     protected double prix;
-    protected Date date_expiration;
+    protected LocalDate date_expiration;
 
     public Produit() {
     }
@@ -29,7 +29,7 @@ public class Produit {
         this.prix = prix;
     }
 
-    public Produit(int Id, String libelle, String marque, double prix, Date date_expiration) {
+    public Produit(int Id, String libelle, String marque, double prix, LocalDate date_expiration) {
         this.Id = Id;
         this.libelle = libelle;
         this.marque = marque;
@@ -57,7 +57,7 @@ public class Produit {
                 + " Date D'expiration: " + date_expiration;
     }
 
-    public void setDateExpiration(Date date_expiration) {
+    public void setDateExpiration(LocalDate date_expiration) {
         this.date_expiration = date_expiration;
     }
 
