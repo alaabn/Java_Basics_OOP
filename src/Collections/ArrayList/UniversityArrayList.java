@@ -1,7 +1,8 @@
-package Collections;
+package Collections.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 import Collections.Interface.IUniversity;
@@ -38,9 +39,16 @@ public class UniversityArrayList implements IUniversity {
 
     @Override
     public void displayEtudiants() {
-        for (Etudiant e : tabE) {
+        /* java7 for loop */
+        for (Etudiant e : tabE)
             System.out.println(e);
-        }
+
+        /* java 8 foreach */
+        tabE.forEach(x -> System.out.println(x));
+
+        /* Iterator */
+        for (Iterator<Etudiant> i = tabE.iterator(); i.hasNext();)
+            System.out.println(i.next());
     }
 
     @Override
@@ -50,6 +58,7 @@ public class UniversityArrayList implements IUniversity {
 
     @Override
     public void trierEtudiantsParNom() {
+        /* Lambda expression */
         tabE.sort((e1, e2) -> e1.getNom().compareToIgnoreCase(e2.getNom()));
     }
 

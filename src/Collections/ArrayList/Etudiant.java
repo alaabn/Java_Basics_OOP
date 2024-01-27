@@ -1,4 +1,4 @@
-package Collections;
+package Collections.ArrayList;
 
 public class Etudiant {
     private int id;
