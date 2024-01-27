@@ -45,3 +45,26 @@
     ```
 
 4. Construisez les classes GestionEnseignantHashSet et GestionEnseignantTreeSet qui implémentent l'interface IGestionEnseignant et qui reposent sur l'utilisation respective d’un HashSet et d’un TreeSet pour la gestion de la liste des enseignants.
+
+---
+### Partie III
+
+1. Ecrivez les classes Employe et Departement Un employé est caractérisé par un cin, un matricule, un nom et un prenom. Un département est caractérisé par son identifiant et son nom. Chaque classe possède :
+    * Deux constructeurs dont un sans paramètre.
+    * Les getters et les setters
+    * La méthode toString()
+    * La méthode equals
+2. Créez l’interface ISociete
+    ```java
+    public interface ISociete {
+        public void ajouterEmployeDepartement(Employe e,Departement d);
+        public void supprimerEmploye(Employe e);
+        public void afficherLesEmployesLeursDepartements();
+        public void afficherLesEmployes();
+        public void afficherLesDepartements();
+        public void afficherDepartement(Employe e);
+        public boolean rechercherEmploye(Employe e);
+        public boolean rechercherDepartement(Departement e);
+    }
+    ```
+3. Construisez les classes SocieteHashMap et SocieteTreeMap qui implémentent l'interface ISociete et qui reposent sur l'utilisation respective d’un HashMap et d’un TreeMap pour la gestion des employés ainsi que leurs départements respectifs.
