@@ -1,4 +1,4 @@
-# Collections Exercices (ArrayList)
+# Collections Exercices (ArrayList, TreeSet, HashSet, TreeMap, HashMap)
 
 ### Parti I
 
