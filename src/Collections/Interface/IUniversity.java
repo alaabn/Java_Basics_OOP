@@ -1,6 +1,6 @@
 package Collections.Interface;
 
-import Collections.Etudiant;
+import Collections.ArrayList.Etudiant;
 
 public interface IUniversity {
     public void ajouterEtudiant(Etudiant e);
