@@ -6,17 +6,17 @@ on:
     branches:
       - main
     tags:
-      - "*"
-  pull_request:
-    types: ["opened", "synchronize", "reopened"]
+      - "v*"
 
 jobs:
   github-example-tags:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: GitHub Tag Name example
         run: |
           # Display all environment variables starting with 'GITHUB_'
           env | grep ^GITHUB_
           echo "Tag name from GITHUB_REF_NAME : $GITHUB_REF_NAME"
           echo "Tag name from github.ref_name : ${{  github.ref_name }}"
+          echo "Tag name from github.event : ${{ github.event.head_commit.ref }}"
