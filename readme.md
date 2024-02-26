@@ -1,5 +1,5 @@
 # Java Assignment
-Assignments Done at the end of the intorduction to Java Programming
+Assignments Done at the end of the intorduction to Java Programming (OOP)
 
 ## Content
 
