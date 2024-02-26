@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - name: Show latest tag
-      run: echo "Latest tag is ${{ env.GITHUB_REF }}"
+      run: echo "Latest tag is ${{ github.ref_name }}"
