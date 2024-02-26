@@ -12,11 +12,11 @@ jobs:
   github-example-tags:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: GitHub Tag Name example
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Describe Tags
         run: |
-          # Display all environment variables starting with 'GITHUB_'
-          env | grep ^GITHUB_
-          echo "Tag name from GITHUB_REF_NAME : $GITHUB_REF_NAME"
-          echo "Tag name from github.ref_name : ${{  github.ref_name }}"
-          echo "Tag name from github.event : ${{ github.event.head_commit.ref }}"
+          git fetch --prune --unshallow
+          latest_tag=$(git describe --tags --abbrev=0 HEAD~)
+          echo "Latest Tag: $latest_tag"
