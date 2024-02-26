@@ -1,0 +1,14 @@
+name: Get Latest Tag Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  get-latest-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Show latest tag
+      run: echo "Latest tag is ${{ env.GITHUB_REF }}"
