@@ -1,9 +1,14 @@
 name: Get Latest Tag Example
 
+# Update 'push' and 'pull\_request' events to include both branches and tags
 on:
   push:
     branches:
       - main
+    tags:
+      - "*"
+  pull_request:
+    types: ["opened", "synchronize", "reopened"]
 
 jobs:
   github-example-tags:
@@ -11,5 +16,7 @@ jobs:
     steps:
       - name: GitHub Tag Name example
         run: |
+          # Display all environment variables starting with 'GITHUB_'
+          env | grep ^GITHUB_
           echo "Tag name from GITHUB_REF_NAME : $GITHUB_REF_NAME"
           echo "Tag name from github.ref_name : ${{  github.ref_name }}"
